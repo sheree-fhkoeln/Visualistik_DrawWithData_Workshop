@@ -1,10 +1,10 @@
-const MAX_VALUE = 150;
+const MAX_VALUE = 120;
 
 /* *********************************************************
 
  Aufgabe 1.1 Balken erzeugen (select(), append(), attr())
 
-   ********************************************************* */
+ ********************************************************* */
 
 d3.select("#t1_p1");
 
@@ -31,8 +31,16 @@ d3.select("#t1_p3");
 
 /* *********************************************************
 
- Aufgabe 1.4 Erzeugung eines neuen Datenarrays mit zufälligen Werten
+ Zusatz: Erzeugung eines neuen Datenarrays mit zufälligen Werten
+ Zur Einbindung kopieren Sie bitte den Code aus Aufgabe 1.3
+ und setzen Sie ihn an das vorgefertigte "d3.select("#t1_p4")"
 
  ********************************************************* */
+
+dataset = [];
+for (var i = 0; i < 10; i++) {           // Aufgabe1.4
+    var newNumber = 10 + Math.floor(Math.random() * MAX_VALUE);
+    dataset.push(newNumber);
+}
 
 d3.select("#t1_p4");

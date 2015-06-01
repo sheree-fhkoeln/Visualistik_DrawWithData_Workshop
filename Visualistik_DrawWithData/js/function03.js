@@ -10,7 +10,7 @@ for (var i = 0; i < 20; i++) {
 }
 /* *********************************************************
 
- Aufgabe 3.1 Anpassung der Balkenbreite an die Grenzen der SVG
+ Aufgabe 3.1 Anpassung der Baseline
 
  ********************************************************* */
 
@@ -27,14 +27,17 @@ svg_one.selectAll("rect")
         return (i * (width / dataset.length));
     })
     .attr("y", 0)
-    .attr("width", 20)
+    .attr("width", function (d) {
+        return (width / dataset.length) - barpadding;
+    })
     .attr("height", function (d) {
         return d;
     });
 
+
 /* *********************************************************
 
- Aufgabe 3.2 Anpassung der Baseline
+ Aufgabe 3.2 Vergabe eines Farbverlaufes, abhängig von den Werten des Datenarrays
 
  ********************************************************* */
 
@@ -50,47 +53,53 @@ svg_two.selectAll("rect")
     .attr("x", function (d, i) {
         return (i * (width / dataset.length));
     })
-    .attr("y", 0)
-    .attr("width", 20)// <---- Übernahme aus Aufgabe 3.1
+    .attr("y", 0)// <-------------- HINWEIS: Übernahme aus Aufgabe 3.1 notwendig
+    .attr("width", function (d) {
+        return (width / dataset.length) - barpadding;
+    })
     .attr("height", function (d) {
         return d;
-    });
-
+    })
+    // Styling mit Farbverlauf abhängig vom Datenwert
+    ;
 
 /* *********************************************************
 
- Aufgabe 3.3 Vergabe eines Farbverlaufes, abhängig von den Werten des Datenarrays
+ Aufgabe 3.3 Anbringung und Justierung der Labels
 
  ********************************************************* */
+
+var barWidth;
 
 var svg_three = d3.select("#t3_p3")
     .append("svg")
     .attr("width", width)
     .attr("height", height);
 
-svg_three.selectAll("rect"); // <---- Übernahme aus Aufgabe 3.2
+svg_three.selectAll("rect")
+    .data(dataset)
+    .enter()
+    .append("rect")
+    .attr("x", function (d, i) {
+        return (i * (width / dataset.length));
+    })
+    .attr("y", 0)
+    .attr("width", function (d) {
+        barWidth = (width / dataset.length) - barpadding;
+        return barWidth;
+    })
+    .attr("height", function (d) {
+        return d;
+    });
 
-
-/* *********************************************************
-
- Aufgabe 3.4 Anbringung und Justierung der Labels
-
- ********************************************************* */
-
-var barWidth;
-
-var svg_four = d3.select("#t3_p4")
-    .append("svg")
-    .attr("width", width)
-    .attr("height", height);
-
-svg_four.selectAll("rect"); // <---- Übernahme aus Aufgabe 3.3
-
-
-svg_four.selectAll("text")
+svg_three.selectAll("text")
     .data(dataset)
     .enter()
     .append("text")
+    .text(function (d) {
+        return d;
+    })
+    // Positionierung des Textes mit x- und y-Wert
     .attr("text-anchor", "middle")
     .attr("font-family", "sans-serif")
     .attr("font-size", "11px")

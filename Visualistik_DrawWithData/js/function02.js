@@ -10,7 +10,7 @@ for (var i = 0; i < 10; i++){
 
 /* *********************************************************
 
- Aufgabe 1.1 Anfügen eines Kreises an eine SVG
+ Aufgabe 2.1 Positionierung der Kreise in einer SVG
 
  ********************************************************* */
 
@@ -19,10 +19,16 @@ var svg_one = d3.select("#t2_p1")
     .attr("width", width)
     .attr("height", height);
 
+svg_one.selectAll("circle")
+    .data(dataset)
+    .enter()
+    .append("circle")
+    .attr("r", radius);
+
 
 /* *********************************************************
 
- Aufgabe 1.2 Platzieren eines Kreises in der SVG
+ Aufgabe 2.2 Die Größe der Kreise entspricht den Werten im Datenarray.
 
  ********************************************************* */
 
@@ -31,26 +37,8 @@ var svg_two = d3.select("#t2_p2")
     .attr("width", width)
     .attr("height", height);
 
-
-/* *********************************************************
-
- Aufgabe 1.3 Die Anzahl der Kreise entspricht den Werten im Datenarray. Positionieren sie entsprechend.
-
- ********************************************************* */
-
-var svg_three = d3.select("#t2_p3")
-    .append("svg")
-    .attr("width", width)
-    .attr("height", height);
-
-
-/* *********************************************************
-
- Aufgabe 1.4 Die Größe der Kreise entspricht den Werten im Datenarray.
-
- ********************************************************* */
-
-var svg_four = d3.select("#t2_p4")
-    .append("svg")
-    .attr("width", width)
-    .attr("height", height);
+svg_two.selectAll("circle")
+    .data(dataset)
+    .enter()
+    .append("circle")
+    .attr("r", radius);
