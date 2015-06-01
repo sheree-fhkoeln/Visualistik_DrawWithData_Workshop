@@ -1,0 +1,79 @@
+* {
+    color: #5D5F60;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", sans-serif;
+    font-weight: 300;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #F2F2F2;
+}
+
+.pagecontainer {
+    margin: 0 auto;
+    width: 960px;
+}
+
+.description {
+    width: 100%;    
+}
+
+section {
+    margin-top: 40px;   
+}
+
+.task {
+    width: 66%;
+    margin: 20px 0;
+}
+ .task ol{
+    margin: 0 30px;
+ }
+.task ol li {
+    margin: 0 30px;
+}
+
+.part {
+    border: 2px solid darkgray;
+    height: 100px;
+    padding: 40px;
+}
+
+.svg_circ {
+    height: auto;
+    padding: 0;
+}
+
+.diagram {
+    background-color: lightgray;
+    height: auto;
+    margin-top: 30px;
+    width: auto;
+}
+
+.bar {
+    background-color: #008080;
+    display: inline-block;
+    height: 75px;
+    margin-right: 2px;
+    width: 20px;
+}
+
+circle, rect {
+    fill: #008080;    
+}
+
+text {
+    color: #fff;
+    font-family: sans-serif;
+    font-size: 11px;
+}
+
+.highlight {
+    font-weight: bold;
+}
+
+code {
+    font-family:'Lucida Console', monospace;
+}

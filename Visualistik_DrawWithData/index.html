@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head lang="de">
+    <meta charset="UTF-8">
+    <title>Visualistik</title>
+    <script src="js/d3.v3.min.js" charset="UTF-8"></script>
+
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+
+</head>
+<body>
+<div class="pagecontainer">
+    <section>
+        <h1>Drawing with Data</h1>
+        <p class="description">Die nachfolgenden Aufgaben orientieren sich an dem Kapitel 6 des Buches
+        <span class="highlight">Interactive Data Visualization for the Web</span> von
+        Scott Murray, erschienen im O'Reilly-Verlag. Eine Online-Version ist auf der
+        Webressource von O'Reilly verfügbar (siehe <a href="http://chimera.labs.oreilly.com/books/1230000000345/ch06.html">http://chimera.labs.oreilly.com/books/1230000000345/ch06.html</a>).</p>
+        <p>Die Elemente dieser Seite sind vorab mit einem Style versehen, sodass Sie den Anweisungen folgen sollten, um zum angestrebten Ergebnis zu kommen.</p>
+        <p>Zusammengefasste Informationen des Kapitels finden Sie unter dem Link <a href="https://github.com/mirar/Visualistik_DrawWithData/wiki">https://github.com/mirar/Visualistik_DrawWithData/wiki</a></p>
+    </section>
+    <section class="whole_task">
+        <h2>Aufgabe 1 - Balkendiagramm</h2>
+
+        <div class="task">
+            <ol>
+                <li>Erzeugen Sie mit Hilfe der Ihnen bekannten Funktionen
+                    <ul>
+                        <li>select()</li>
+                        <li>append()</li>
+                        <li>attr()</li>
+                    </ul>
+                    einen senkrechten Balken, der folgender HTML-Syntax entspricht:
+                    <pre><code>&lt;div class="bar"&gt;&lt;/div&gt;</code></pre>
+                </li>
+                <li>Binden Sie ein Datenarray ein, an welches Sie Balken, mit dem oben genannten Klassen-Attribut, binden.</li>
+                <li>Passen Sie nun die Balkenhöhe an die Werte des Datenarrays an.</li>
+                <li>Füllen Sie ein weiteres Datenarray mit Zufallszahlen und passen die Balkenhöhe an das neue Datenarray
+                    an.
+                </li>
+            </ol>
+        </div>
+        <div class="diagram" id="task_one">
+            <div class="part" id="t1_p1"></div>
+            <div class="part" id="t1_p2"></div>
+            <div class="part" id="t1_p3"></div>
+            <div class="part" id="t1_p4"></div>
+        </div>
+    </section>
+
+    <section class="whole_task">
+        <h2>Aufgabe 2 - SVG</h2>
+
+        <div class="task">
+            <ol>
+                <li>Fügen Sie in die vorhandene SVG einen Kreis ein. Nutzen Sie die vorgegebenen Werte.
+                    Eine zugehörige HTML-Syntax könnte wie folgt lauten: <br />
+                <pre><code>&lt;svg width="500" height="50"&gt;
+    &lt;circle cx="50" cy="50" r="20"&gt;&lt;/circle&gt;
+&lt;/svg&gt;</code></pre></li>
+                <li>Platzieren Sie den Kreis, sodass der Kreis vollkommen sichtbar ist.</li>
+                <li>Binden Sie das Datenarray an die Kreise der SVG.</li>
+                <li>Passen Sie den Radius der Kreise an die Werte im Datenarray an.</li>
+            </ol>
+        </div>
+        <div class="diagram" id="task_two">
+            <div class="part svg_circ" id="t2_p1"></div>
+            <div class="part svg_circ" id="t2_p2"></div>
+            <div class="part svg_circ" id="t2_p3"></div>
+            <div class="part svg_circ" id="t2_p4"></div>
+        </div>
+    </section>
+
+    <section class="whole_task">
+        <h2>Aufgabe 3 - Balkendiagramm in SVG</h2>
+
+        <div class="task">
+            <ol>
+                <li>Passen Sie die Balkenbreite relativ zur SVG-Breite an.</li>
+                <li>Positionieren Sie die Baseline am unteren Rand der SVG.</li>
+                <li>Fügen Sie einen Farbverlauf entsprechend der Werte des Datenarrays ein.</li>
+                <li>Fügen Sie dem Balkendiagramm Labels hinzu.</li>
+            </ol>
+        </div>
+        <div class="diagram" id="task_three">
+            <div class="part" id="t3_p1"></div>
+            <div class="part" id="t3_p2"></div>
+            <div class="part" id="t3_p3"></div>
+            <div class="part" id="t3_p4"></div>
+        </div>
+    </section>
+
+    <section class="whole_task">
+        <h2>Aufgabe 4 - Scatterplot in SVG</h2>
+
+        <div class="task">
+            <ol>
+                <li>Positionieren Sie die Kreise anhand ihrer Werte im Datenarray.</li>
+            </ol>
+        </div>
+        <div class="diagram" id="task_four">
+            <div class="part" id="t4_p1"></div>
+        </div>
+    </section>
+</div>
+<script src="js/function01.js" charset="UTF-8"></script>
+<script src="js/function02.js" charset="UTF-8"></script>
+<script src="js/function03.js" charset="UTF-8"></script>
+<script src="js/function04.js" charset="UTF-8"></script>
+
+</body>
+</html>
