@@ -83,14 +83,14 @@ svg_three.selectAll("rect")
     .attr("x", function (d, i) {
         return (i * (width / dataset.length));
     })
-    .attr("y", 0)
+    .attr("y", 0)// <-------------- HINWEIS: Übernahme aus Aufgabe 3.1 notwendig
     .attr("width", function (d) {
         barWidth = (width / dataset.length) - barpadding;
         return barWidth;
     })
     .attr("height", function (d) {
         return d;
-    });
+    });// <-------------- HINWEIS: Übernahme aus Aufgabe 3.2 notwendig
 
 svg_three.selectAll("text")
     .data(dataset)
